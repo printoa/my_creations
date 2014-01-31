@@ -1,0 +1,95 @@
+/* Main Style */
+body{
+	font-size : 13px;
+	line-height : 21px;
+	background : #DEDEDE;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.clear{
+	clear : both;
+}
+.main_row{
+	margin : 0px;
+	padding : 0px;
+	height : 100%;
+	background-size : 100%;
+	background-repeat : 
+}
+.main_column{
+	width : 1000px;
+	margin : 0px auto;
+	padding : 0px;
+}
+.header_row{
+	margin : 0px auto;
+	padding : 0px;
+	height : 150px;
+}
+.logo{
+	float : left;
+}
+.logo img{
+	top: -110px;
+	position: absolute;
+	margin-left: -200px;
+	width: 100px;
+}
+.nav{
+	float : right;
+}
+.nav ul{
+	list-style : none
+}
+.nav li{
+	font-size : 14px;
+	float : left;
+	margin-top : -60px;
+	background : #FF8000;
+	border-radius : 7px;
+	border : 1px solid #FAAC58;
+	padding : 6px 10px;
+	width : 50px;
+	margin-right : 10px;
+	color : #FFF;
+	text-align : center;
+}
+.content_row{
+	margin-top : 30px;
+}
+.upload_main{
+	padding : 20px;
+	margin : 0px;
+	width : 97%;
+	height : 600px;
+}
+
+.upload_main table{
+	display : none;
+	padding : 0px;
+	margin : 0px auto;
+	width : 80%;
+	background : none;
+	border : 0px;
+}
+.upload_main table td{
+	padding : 20px;
+	margin : 0px;
+	background : none;
+	border : 0px;
+	width : 400px;
+	height : 310px;
+}
+.upload_main table td div img{
+	padding : 0px;
+	margin : 0px;
+	border : 0px;
+	width : 250px;
+	height : 260px;
+}
+.footer{
+	display : none;
+	text-align : center;
+	margin-top : 20px;
+	font-size : 13px;
+	color : #FFF;
+}

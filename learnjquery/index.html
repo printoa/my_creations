@@ -1,0 +1,100 @@
+<html>
+<head>
+	<script src="jquery-1.10.2.js" type="text/javascript"></script>
+	<script type="text/javascript">
+		var menuloop = 1;
+		$(document).ready(function(){calluploadmain();});	
+			
+		function calluploadmain(){
+			$('.main_row').animate({opacity : 0}, '5000', function() {
+				$(this).css({'background-image': 'url(images/back.png)'}).animate({opacity: 1}, 5000);
+				calllogo();
+			});
+		}	
+		
+		function calluploadmainimages(){
+			$( ".upload_main" ).animate({
+				opacity: 0
+				}, 2000, function() {
+					$(this).css({'background-image' : 'url(images/upload_main_back.jpg)'}).animate({opacity: 1}, 3000);
+					setTimeout(function(){
+						$( ".upload_main table" ).fadeIn(4000);
+					}, 5000);
+			});
+		}
+		
+		function calllogo(){
+			setTimeout(function(){
+				$( ".logo img" ).animate({
+					top : "60px",
+					marginLeft: "30px",
+				}, 3000 );
+				setTimeout(function(){calltomenuanimateres(menuloop);}, 5000);
+			}, 4500);
+		}
+			
+		function calltomenuanimateres(liposres){
+			$( ".nav ul li:nth-child("+liposres+")" ).animate({
+				marginTop : "50px"
+			}, 900);
+			$( ".nav ul li:nth-child("+liposres+")" ).animate({
+				marginTop : "10px"
+			}, 1000);
+			$( ".nav ul li:nth-child("+liposres+")" ).animate({
+				marginTop : "50px"
+			}, 1300);
+			menuloop++;
+			if(menuloop<5){
+				setTimeout(function(){
+					calltomenuanimateres(menuloop)
+				}, 2300);
+			}else{
+				setTimeout(function(){
+					$( ".footer" ).fadeIn(2000);
+					calluploadmainimages();
+				}, 2500);
+			}
+		}
+			
+	</script>
+	<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+<body>
+	<div class="main_row">
+		<div class="main_column">
+			<div class="header_row">
+				<div class="logo"><img src="images/logo.png" /></div>
+				<div class="nav">
+					<ul>
+						<li>One</li>
+						<li>Two</li>
+						<li>Three</li>
+						<li>Four</li>
+					</ul>
+				</div>
+			</div>
+			<div class="clear"></div>
+			<div class="content_row">
+				<div class="upload_main">
+					<table>
+						<tr>
+							<td style="text-align : right; vertical-align : middle;"><div id="upimg3"><img src="images/flower3.png" /></div></td>
+							<td style="text-align : right; vertical-align : top;"><div id="upimg1"><img src="images/flower1.png" /></div></td>
+						</tr>
+						<tr>
+							<td  style="text-align : left; vertical-align : bottom;"><div id="upimg4"><img src="images/flower4.png" /></div></td>
+							<td style="text-align : center; vertical-align : middle;"><div id="upimg2"><img src="images/flower2.png" /></div></td>
+						</tr>
+					</table>
+				</div>
+			</div>
+			<div class="clear"></div>
+			<div class="footer_row">
+				<div class="footer">
+					Copyright by Company Name | 2013
+				</div>
+			</div>
+		</div>		
+	</div>
+</body>
+</html>

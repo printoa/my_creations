@@ -1,0 +1,6 @@
+<div>
+	<img src="images/main_back.png">
+</div>
+<div>
+	<img src="images/upload_back.png">
+</div>
